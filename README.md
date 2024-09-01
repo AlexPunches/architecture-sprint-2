@@ -5,31 +5,19 @@
 Запускаем mongodb и приложение
 
 ```shell
+cd ./sharding-repl-cache
 docker compose up -d
 ```
 
 Заполняем mongodb данными
 
 ```shell
-./scripts/mongo-init.sh
+sudo chmod +x ./mongo-init.sh && ./mongo-init.sh
 ```
 
-## Как проверить
+Наблюдать результать можно в браузере:  
+[http://localhost:8080](http://localhost:8080)
 
-### Если вы запускаете проект на локальной машине
+Свагер:  
+[http://localhost:8080/docs](http://localhost:8080/docs)
 
-Откройте в браузере http://localhost:8080
-
-### Если вы запускаете проект на предоставленной виртуальной машине
-
-Узнать белый ip виртуальной машины
-
-```shell
-curl --silent http://ifconfig.me
-```
-
-Откройте в браузере http://<ip виртуальной машины>:8080
-
-## Доступные эндпоинты
-
-Список доступных эндпоинтов, swagger http://<ip виртуальной машины>:8080/docs
